@@ -26,3 +26,6 @@ EXPOSE 443
 # Set the default command to execute
 # when creating a new container
 CMD service nginx start
+
+# Example runline:
+# sudo docker run -d -p 443:443 cpswan/nginxssl
