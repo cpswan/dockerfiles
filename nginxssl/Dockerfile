@@ -14,8 +14,8 @@ RUN rm -v /etc/nginx/nginx.conf
 
 # Copy a configuration file from the current directory
 ADD ./nginx.conf /etc/nginx/
-ADD ssl.key /etc/nginx/ssl/
-ADD ssl.crt /etc/nginx/ssl/
+ADD ./ssl.key /etc/nginx/ssl/
+ADD ./ssl.crt /etc/nginx/ssl/
 
 # Create empty directory for logs
 RUN mkdir -p /etc/nginx/logs
