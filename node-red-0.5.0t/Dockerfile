@@ -32,3 +32,10 @@ RUN cd /opt/node-red-0.5.0 && npm install --production
 
 # remove node-red archive
 RUN rm 0.5.0.zip
+
+# expose port
+EXPOSE 1880
+
+# Set the default command to execute
+# when creating a new container
+CMD /usr/bin/node /opt/node-red-0.5.0/red.js
