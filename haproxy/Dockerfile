@@ -19,3 +19,6 @@ EXPOSE 80
 
 # run haproxy
 CMD /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
+
+# example usage:
+# sudo docker run -d -p 80:80 cpswan/haproxy
