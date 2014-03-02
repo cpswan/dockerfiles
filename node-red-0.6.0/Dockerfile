@@ -7,7 +7,7 @@ MAINTAINER cpswan
 RUN sed -i s/main/'main universe'/ /etc/apt/sources.list
 
 # make sure everything is up to date - update and upgrade
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update
 
 # install dependencies
 RUN apt-get install python-software-properties python g++ make software-properties-common wget unzip -y
