@@ -11,7 +11,7 @@ RUN apt-get update &&\
     apt-get clean &&\
     useradd -m openwrt &&\
     echo 'openwrt ALL=NOPASSWD: ALL' > /etc/sudoers.d/openwrt &&\
-    sudo -iu openwrt tar -xvf /OpenWrt-SDK-ramips-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2 -C /home/openwrt/
+    sudo -iu openwrt sudo tar -xvf /OpenWrt-SDK-ramips-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2 -C /home/openwrt/
 
 CMD /usr/bin/sudo -iu openwrt /bin/bash
 
