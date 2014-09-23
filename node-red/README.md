@@ -1,6 +1,6 @@
-Ubuntu 12.04, Node 0.10.28, Node-Red 0.8.1
+Ubuntu 12.04, Node 0.10.32, Node-Red 0.9.0
 
-node-red-0.8.1
+node-red-0.9.0
 ==============
 
 Example usage:
