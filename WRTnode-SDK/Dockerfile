@@ -2,16 +2,21 @@ FROM ubuntu:14.04
 
 MAINTAINER cpswan
 
-ADD http://resources.pichimney.com/WRTnode/SDK/OpenWrt-SDK-ramips-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2 /OpenWrt-SDK-ramips-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2
-
-RUN apt-get update &&\
-    apt-get install -y git-core subversion build-essential gcc-multilib \
-                       libncurses5-dev zlib1g-dev gawk flex gettext \
-                       unzip python wget &&\
-    apt-get clean &&\
+RUN export DEBIAN_FRONTEND=noninteractive &&\
+    apt-get update &&\
+    apt-get install -y build-essential subversion git-core libncurses5-dev \
+      zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl \
+      mercurial bzr ecj cvs unzip python wget &&\
     useradd -m openwrt &&\
     echo 'openwrt ALL=NOPASSWD: ALL' > /etc/sudoers.d/openwrt &&\
-    sudo -iu openwrt sudo tar -xvf /OpenWrt-SDK-ramips-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2 -C /home/openwrt/
+    wget http://d.wrtnode.com/3.14.18/Wrtnode_SDK_11_27.tar.bz2 &&\
+    wget http://d.wrtnode.com/3.14.18/dl_11_27.tar.bz2 &&\
+    sudo -iu openwrt sudo tar -xvf /Wrtnode_SDK_11_27.tar.bz2 -C \
+      /home/openwrt/ &&\
+    sudo -iu openwrt sudo tar -xvf /dl_11_27.tar.bz2 -C \
+      /home/openwrt/wrtnode-sdk/ &&\
+    rm /Wrtnode_SDK_11_27.tar.bz2 &&\
+    rm /dl_11_27.tar.bz2 
 
 CMD /usr/bin/sudo -iu openwrt /bin/bash
 
