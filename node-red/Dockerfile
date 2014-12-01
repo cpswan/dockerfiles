@@ -22,13 +22,13 @@ RUN apt-get update
 RUN apt-get install nodejs -y
 
 # download node-red
-RUN wget https://github.com/node-red/node-red/archive/0.9.0.zip
+RUN wget https://github.com/node-red/node-red/archive/0.9.1.zip
 
 # unzip node-red into /opt
-RUN unzip 0.9.0.zip -d /opt
+RUN unzip 0.9.1.zip -d /opt
 
 # set working directory
-WORKDIR /opt/node-red-0.9.0
+WORKDIR /opt/node-red-0.9.1
 
 # install node-red
 RUN npm install --production
