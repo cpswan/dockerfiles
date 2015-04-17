@@ -4,7 +4,7 @@ MAINTAINER @cpswan
 
 # install utility packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    sudo 
+    sudo curl wget vim
 
 # install awscli and jpterm
 RUN pip install awscli jmespath-terminal
