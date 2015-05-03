@@ -1,7 +1,9 @@
 net-app-svcs
 ============
 
-This is a version of the haproxy-ssl-ssh container that adds modsecurity and the OWASP rule set to provide a web application firewall (WAF). Also updated HAproxy to 1.5 and added rsyslog.
+This container image has nginx 1.8.0 with modsecurity 2.9.0 for TLS termination and web application firewall (WAF).
+
+It also has HAProxy 1.5.12 for load balancing.
 
 SSL Key files
 -------------
