@@ -17,7 +17,9 @@ RUN useradd -m awscli &&\
 RUN echo "complete -C '/usr/local/bin/aws_completer' aws" >> \
     /home/awscli/.bashrc
 
+USER awscli
+
 #default command
-CMD /usr/bin/sudo -iu awscli /bin/bash
+CMD /bin/bash
 
 #example use: 'sudo docker run -it cpswan/awscli'
