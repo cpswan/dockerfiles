@@ -1,4 +1,4 @@
-FROM python:2.7.9-slim
+FROM python:2-slim
 
 MAINTAINER @cpswan
 
