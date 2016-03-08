@@ -8,3 +8,5 @@ Inpired by [Martin Elwin's](https://twitter.com/elvvin) presentation [Deep Dive:
 Example usage:
 
 `sudo docker run -it cpswan/awscli`
+
+Once the container has downloaded and started use `aws configure` to set up default keys etc. With the keys in place `aws ec2 describe-regions` can be used to test that everything is working.
