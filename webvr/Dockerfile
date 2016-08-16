@@ -24,5 +24,5 @@ RUN cd /home/webvr &&\
 WORKDIR /home/webvr/getting-started-with-webvr
 CMD bundle exec jekyll serve 
 
-#example usage: 'sudo docker run -it --name webvr -p 4000:4000 cpswan/webvr'
+#example usage: 'sudo docker run -dp 4000:4000 --name webvr cpswan/webvr'
 #example usage: 'sudo docker exec -it webvr bash'
