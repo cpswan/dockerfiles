@@ -1,9 +1,9 @@
-FROM node:6
+FROM node:12
 
 MAINTAINER cpswan
 
 # install node-red
-RUN npm install -g node-red
+RUN npm install -g --unsafe-perm node-red
 
 # expose port
 EXPOSE 1880
