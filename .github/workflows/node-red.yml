@@ -6,7 +6,7 @@ on:
       node-red-version:
         description: 'Node-Red version'
         required: true
-        default: '2.0.5'
+        default: '5.0.0'
 
 jobs:
   build_multi_arch_images:
